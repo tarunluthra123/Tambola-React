@@ -4,6 +4,7 @@ import Board from "./components/Board";
 import NavBar from "./components/NavBar";
 import RandomGenerator from "./components/RandomGenerator";
 import LastNumber from "./components/LastNumber";
+import Options from "./components/Options";
 
 class App extends Component {
     constructor(props) {
@@ -40,6 +41,9 @@ class App extends Component {
 
     generateNumber = () => {
         let x = this.nextRandomInteger()
+        if (x === -1) {
+            return
+        }
         if (this.state.nextNumber === '') {
             this.setState({
                 nextNumber: x
@@ -65,12 +69,15 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <LastNumber value={this.state.lastNumber}/>
-                    <div className="col"/>
+                    <div className="col-3">
+                        <LastNumber value={this.state.lastNumber}/>
+                    </div>
+                    <div className="col">
+                        <Options sequence={this.state.sequence}/>
+                    </div>
                     <div className="col-3">
                         <RandomGenerator nextRandomInteger={this.generateNumber}/>
                     </div>
-
                 </div>
             </div>
         );

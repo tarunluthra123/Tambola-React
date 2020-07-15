@@ -31,6 +31,7 @@ class RandomGenerator extends Component {
                 // console.log('here')
                 clearInterval(id)
                 let x = this.props.nextRandomInteger()
+                if(x==-1)return
                 this.setState({
                     val: x,
                     isSet: true
