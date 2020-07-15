@@ -2,116 +2,139 @@ import React, {Component} from 'react';
 import Square from "./Square";
 
 class Board extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sequence: this.props.sequence
+        }
+    }
+
+    renderSquare = (i) => {
+        const sequence = this.props.sequence
+        // console.log('i = ', i, 'sequence = ', sequence)
+        if (sequence.includes(i)) {
+            // console.log('done true')
+            return (
+                <Square value={i} done={true}/>
+            )
+        } else {
+            // console.log('done false')
+            return (
+                <Square value={i} done={false}/>
+            )
+        }
+    }
+
     render() {
         return (
             <div id="board">
                 <div className="board-row row">
-                    <Square value={1}/>
-                    <Square value={2}/>
-                    <Square value={3}/>
-                    <Square value={4}/>
-                    <Square value={5}/>
-                    <Square value={6}/>
-                    <Square value={7}/>
-                    <Square value={8}/>
-                    <Square value={9}/>
-                    <Square value={10}/>
+                    {this.renderSquare(1)}
+                    {this.renderSquare(2)}
+                    {this.renderSquare(3)}
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
+                    {this.renderSquare(6)}
+                    {this.renderSquare(7)}
+                    {this.renderSquare(8)}
+                    {this.renderSquare(9)}
+                    {this.renderSquare(10)}
                 </div>
                 <div className="board-row row">
-                    <Square value={11}/>
-                    <Square value={12}/>
-                    <Square value={13}/>
-                    <Square value={14}/>
-                    <Square value={15}/>
-                    <Square value={16}/>
-                    <Square value={17}/>
-                    <Square value={18}/>
-                    <Square value={19}/>
-                    <Square value={20}/>
+                    {this.renderSquare(11)}
+                    {this.renderSquare(12)}
+                    {this.renderSquare(13)}
+                    {this.renderSquare(14)}
+                    {this.renderSquare(15)}
+                    {this.renderSquare(16)}
+                    {this.renderSquare(17)}
+                    {this.renderSquare(18)}
+                    {this.renderSquare(19)}
+                    {this.renderSquare(20)}
                 </div>
                 <div className="board-row row">
-                    <Square value={21}/>
-                    <Square value={22}/>
-                    <Square value={23}/>
-                    <Square value={24}/>
-                    <Square value={25}/>
-                    <Square value={26}/>
-                    <Square value={27}/>
-                    <Square value={28}/>
-                    <Square value={29}/>
-                    <Square value={30}/>
+                    {this.renderSquare(21)}
+                    {this.renderSquare(22)}
+                    {this.renderSquare(23)}
+                    {this.renderSquare(24)}
+                    {this.renderSquare(25)}
+                    {this.renderSquare(26)}
+                    {this.renderSquare(27)}
+                    {this.renderSquare(28)}
+                    {this.renderSquare(29)}
+                    {this.renderSquare(30)}
                 </div>
                 <div className="board-row row">
-                    <Square value={31}/>
-                    <Square value={32}/>
-                    <Square value={33}/>
-                    <Square value={34}/>
-                    <Square value={35}/>
-                    <Square value={36}/>
-                    <Square value={37}/>
-                    <Square value={38}/>
-                    <Square value={39}/>
-                    <Square value={40}/>
+                    {this.renderSquare(31)}
+                    {this.renderSquare(32)}
+                    {this.renderSquare(33)}
+                    {this.renderSquare(34)}
+                    {this.renderSquare(35)}
+                    {this.renderSquare(36)}
+                    {this.renderSquare(37)}
+                    {this.renderSquare(38)}
+                    {this.renderSquare(39)}
+                    {this.renderSquare(40)}
                 </div>
                 <div className="board-row row">
-                    <Square value={41}/>
-                    <Square value={42}/>
-                    <Square value={43}/>
-                    <Square value={44}/>
-                    <Square value={45}/>
-                    <Square value={46}/>
-                    <Square value={47}/>
-                    <Square value={48}/>
-                    <Square value={49}/>
-                    <Square value={50}/>
+                    {this.renderSquare(41)}
+                    {this.renderSquare(42)}
+                    {this.renderSquare(43)}
+                    {this.renderSquare(44)}
+                    {this.renderSquare(45)}
+                    {this.renderSquare(46)}
+                    {this.renderSquare(47)}
+                    {this.renderSquare(48)}
+                    {this.renderSquare(49)}
+                    {this.renderSquare(50)}
                 </div>
                 <div className="board-row row">
-                    <Square value={51}/>
-                    <Square value={52}/>
-                    <Square value={53}/>
-                    <Square value={54}/>
-                    <Square value={55}/>
-                    <Square value={56}/>
-                    <Square value={57}/>
-                    <Square value={58}/>
-                    <Square value={59}/>
-                    <Square value={60}/>
+                    {this.renderSquare(51)}
+                    {this.renderSquare(52)}
+                    {this.renderSquare(53)}
+                    {this.renderSquare(54)}
+                    {this.renderSquare(55)}
+                    {this.renderSquare(56)}
+                    {this.renderSquare(57)}
+                    {this.renderSquare(58)}
+                    {this.renderSquare(59)}
+                    {this.renderSquare(60)}
                 </div>
                 <div className="board-row row">
-                    <Square value={61}/>
-                    <Square value={62}/>
-                    <Square value={63}/>
-                    <Square value={64}/>
-                    <Square value={65}/>
-                    <Square value={66}/>
-                    <Square value={67}/>
-                    <Square value={68}/>
-                    <Square value={69}/>
-                    <Square value={70}/>
+                    {this.renderSquare(61)}
+                    {this.renderSquare(62)}
+                    {this.renderSquare(63)}
+                    {this.renderSquare(64)}
+                    {this.renderSquare(65)}
+                    {this.renderSquare(66)}
+                    {this.renderSquare(67)}
+                    {this.renderSquare(68)}
+                    {this.renderSquare(69)}
+                    {this.renderSquare(70)}
                 </div>
                 <div className="board-row row">
-                    <Square value={71}/>
-                    <Square value={72}/>
-                    <Square value={73}/>
-                    <Square value={74}/>
-                    <Square value={75}/>
-                    <Square value={76}/>
-                    <Square value={77}/>
-                    <Square value={78}/>
-                    <Square value={79}/>
-                    <Square value={80}/>
+                    {this.renderSquare(71)}
+                    {this.renderSquare(72)}
+                    {this.renderSquare(73)}
+                    {this.renderSquare(74)}
+                    {this.renderSquare(75)}
+                    {this.renderSquare(76)}
+                    {this.renderSquare(77)}
+                    {this.renderSquare(78)}
+                    {this.renderSquare(79)}
+                    {this.renderSquare(80)}
                 </div>
                 <div className="board-row row">
-                    <Square value={81}/>
-                    <Square value={82}/>
-                    <Square value={83}/>
-                    <Square value={84}/>
-                    <Square value={85}/>
-                    <Square value={86}/>
-                    <Square value={87}/>
-                    <Square value={88}/>
-                    <Square value={89}/>
-                    <Square value={90}/>
+                    {this.renderSquare(81)}
+                    {this.renderSquare(82)}
+                    {this.renderSquare(83)}
+                    {this.renderSquare(84)}
+                    {this.renderSquare(85)}
+                    {this.renderSquare(86)}
+                    {this.renderSquare(87)}
+                    {this.renderSquare(88)}
+                    {this.renderSquare(89)}
+                    {this.renderSquare(90)}
                 </div>
             </div>
         );

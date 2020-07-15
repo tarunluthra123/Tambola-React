@@ -51,7 +51,7 @@ class App extends Component {
             })
         }
         // console.log('in generate number')
-        console.log('Generator - ', this.state)
+        // console.log('Generator - ', this.state)
         return x
     }
 
@@ -61,7 +61,7 @@ class App extends Component {
                 <NavBar/>
                 <div className="row">
                     <div className="col">
-                        <Board className="m-10 p-10"/>
+                        <Board className="m-10 p-10" sequence={this.state.sequence}/>
                     </div>
                 </div>
                 <div className="row">

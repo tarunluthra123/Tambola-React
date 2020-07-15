@@ -6,25 +6,21 @@ class Square extends Component {
 
     }
 
-    state = {
-        value: this.props.value,
-        done: false
-    }
-
     createBlock = function () {
-        if (this.state.done) {
+        const {value, done} = this.props
+        if (done) {
             return (
-                <div className="col square done">{this.state.value}</div>
+                <div className="col square done">{value}</div>
             )
         } else {
             return (
-                <div className="col square">{this.state.value}</div>
+                <div className="col square">{value}</div>
             )
         }
     }
 
     render() {
-        return this.createBlock()
+        return (this.createBlock())
     }
 }
 
