@@ -1,5 +1,17 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
+
+
+.square {
+    background-color: #f58d3f;
+    margin: 4px;
+    padding: 3px;
+}
+
+.done {
+    background-color: green;
+}
+
