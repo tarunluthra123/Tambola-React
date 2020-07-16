@@ -91,23 +91,21 @@ class Options extends Component {
                     </Modal.Footer>
                 </Modal>
                 <div className="btn btn-lg btn-info m-4" data-toggle="tooltip" data-placement="top"
-                     title="View Last 5 Numbers" onClick={this.invertLastFiveState}>
+                     title="View Last 5 Numbers" onClick={this.invertLastFiveState} id="lastFiveOption">
                     Last 5
                 </div>
-                <button className="btn btn-lg btn-secondary m-4" data-toggle="tooltip" data-placement="top"
-                        title="View the complete sequence so far" onClick={this.invertSequenceState}>
+                <button className="btn btn-lg btn-outline-light m-4" data-toggle="tooltip" data-placement="top"
+                        title="View the complete sequence so far" onClick={this.invertSequenceState}
+                        id="completeSequenceOption">
                     Complete Sequence
                 </button>
                 <button className="btn btn-lg btn-danger m-4" data-toggle="tooltip" data-placement="top"
                         title="Reset board" onClick={this.changeModalState}>
                     Reset
                 </button>
-                <div className="collapse" id="collapseExample">
-                    <div className="card card-body">
-                        {sequence}
-                    </div>
+                <div id="sequenceBox">
+                    {this.renderBox()}
                 </div>
-                {this.renderBox()}
             </div>
         );
     }

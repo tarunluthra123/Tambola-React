@@ -2,16 +2,68 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #e5f2f6;
+}
+
+.square {
+    border: black;
+}
+
+
+#board {
+    padding: 60px;
 }
 
 
 .square {
-    background-color: #f58d3f;
     margin: 4px;
     padding: 3px;
+    font-size: 18px;
 }
 
 .done {
-    background-color: green;
+    font-weight: bold;
 }
 
+.generatorValue {
+    font-size: 40px;
+    font-family: Monospaced;
+}
+
+#completeSequenceOption {
+    background-color: #71e0e0;
+}
+
+#lastFiveOption {
+    background-color: #25b6e5;
+}
+
+.App {
+    background-color: #e5f2f6;
+}
+
+.tambolaHeading {
+    font-weight: bold;
+    font-size: 70px;
+    font-family: "cursive";
+}
+
+#lastNumberBox {
+    font-family: Monospaced;
+    background-color: #00daff;
+    font-weight: bold;
+    color: black;
+    font-size: 45px
+}
+
+#lastNumberBoxText {
+    font-size: 35px;
+}
+
+#sequenceBox {
+    font-size: 25px;
+}
+
+#dialogueBox {
+    font-size: 25px
+}

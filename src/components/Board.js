@@ -27,7 +27,7 @@ class Board extends Component {
 
     render() {
         return (
-            <div id="board">
+            <div id="board" className="m-4 p-4">
                 <div className="board-row row">
                     {this.renderSquare(1)}
                     {this.renderSquare(2)}

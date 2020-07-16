@@ -26,12 +26,3 @@
         transform: rotate(360deg);
     }
 }
-
-.square {
-    border: black;
-}
-
-
-#board {
-    padding: 60px;
-}

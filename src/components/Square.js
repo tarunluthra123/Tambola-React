@@ -5,11 +5,11 @@ class Square extends Component {
         const {value, done} = this.props
         if (done) {
             return (
-                <div className="col square done">{value}</div>
+                <div className="col square alert-primary done">{value}</div>
             )
         } else {
             return (
-                <div className="col square">{value}</div>
+                <div className="col square alert-light">{value}</div>
             )
         }
     }

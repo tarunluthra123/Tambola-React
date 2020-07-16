@@ -88,7 +88,7 @@ class App extends Component {
                     <div className="col-3">
                         <LastNumber value={this.state.lastNumber}/>
                     </div>
-                    <div className="col">
+                    <div className="col-5">
                         <Options sequence={this.state.sequence}/>
                     </div>
                     <div className="col-3">
