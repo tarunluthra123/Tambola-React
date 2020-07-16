@@ -74,7 +74,6 @@ class Options extends Component {
 
     render() {
         const sequence = this.props.sequence
-        const lastFive = sequence.slice(-5)
         return (
             <div>
                 <Modal show={this.state.showModal} onHide={this.handleModalClose}>

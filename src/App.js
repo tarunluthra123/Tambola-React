@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import RandomGenerator from "./components/RandomGenerator";
 import LastNumber from "./components/LastNumber";
 import Options from "./components/Options";
+import {Button, Modal} from "react-bootstrap";
 
 class App extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class App extends Component {
     nextRandomInteger = () => {
         let x = Math.floor(Math.random() * 100) % 90 + 1
         const {sequence} = this.state
-        if (sequence.size === 90) {
+        if (sequence.length === 90) {
             this.setState({
                 gameOver: true
             })
@@ -59,9 +60,24 @@ class App extends Component {
         return x
     }
 
+    resetGame = () => {
+        location.reload()
+    }
+
     render() {
         return (
             <div className="App">
+                <Modal show={this.state.gameOver} onHide={this.handleModalClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Game Over</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>You have used up all the numbers</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="danger" onClick={this.resetGame}>
+                            Reset Game
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
                 <NavBar/>
                 <div className="row">
                     <div className="col">

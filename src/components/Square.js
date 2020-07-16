@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 
 class Square extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
     createBlock = function () {
         const {value, done} = this.props
         if (done) {

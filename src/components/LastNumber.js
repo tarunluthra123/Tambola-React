@@ -2,12 +2,19 @@ import React, {Component} from 'react';
 
 class LastNumber extends Component {
     render() {
-        return (
-            <div>
-                Last Number was :<br/>
-                {this.props.value}
-            </div>
-        );
+        if (this.props.value === '') {
+            return (
+                <div/>
+            )
+        } else {
+            // console.log('Value is /' + this.props.value + '/')
+            return (
+                <div>
+                    Last Number was :<br/>
+                    {this.props.value}
+                </div>
+            );
+        }
     }
 }
 
