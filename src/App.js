@@ -81,19 +81,20 @@ class App extends Component {
                 <NavBar/>
                 <div className="row">
                     <div className="col">
-                        <Board className="m-10 p-10" sequence={this.state.sequence}/>
+                        <Board className="m-8 p-8" sequence={this.state.sequence}/>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-3">
                         <LastNumber value={this.state.lastNumber}/>
                     </div>
-                    <div className="col-5">
+                    <div className="col">
                         <Options sequence={this.state.sequence}/>
                     </div>
                     <div className="col-3">
                         <RandomGenerator nextRandomInteger={this.generateNumber}/>
                     </div>
+                    <div className="col-1"/>
                 </div>
             </div>
         );
