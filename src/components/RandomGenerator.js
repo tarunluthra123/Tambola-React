@@ -17,7 +17,7 @@ class RandomGenerator extends Component {
 
 
     dialogues = {
-        1: 'One to rule them all ',
+        1: 'One ring to rule them all',
         2: 'Kitne aadmi the ?',
         3: 'Number of times Sheldon knocks',
         4: 'May the Fourth be with you',
@@ -50,7 +50,7 @@ class RandomGenerator extends Component {
         31: 'Time for fun',
         32: 'Mouth Full',
         33: 'All the 3s',
-        34: 'Dil mange more',
+        34: 'The unspoken rule',
         35: 'Flirty Husband',
         36: 'Jha tak sabko hindi counting ati hai',
         37: 'Mixed luck',
