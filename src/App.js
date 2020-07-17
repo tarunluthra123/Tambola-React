@@ -85,16 +85,15 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-3 m-4">
                         <LastNumber value={this.state.lastNumber}/>
                     </div>
-                    <div className="col">
+                    <div className="col m-4">
                         <Options sequence={this.state.sequence}/>
                     </div>
-                    <div className="col-3">
+                    <div className="col-4 m-4">
                         <RandomGenerator nextRandomInteger={this.generateNumber}/>
                     </div>
-                    <div className="col-1"/>
                 </div>
             </div>
         );

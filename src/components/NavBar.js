@@ -4,7 +4,12 @@ class NavBar extends Component {
     render() {
         return (
             <div>
-                <h1 align="center" className="tambolaHeading">Tambola</h1>
+                <div align="center" className="tambolaHeading">
+                    Tambola
+                    <label className="h4 m-2 p-2">
+                        By Tarun Luthra
+                    </label>
+                </div>
             </div>
         );
     }

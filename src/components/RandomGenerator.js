@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import EleventhDoctorPhoto from '../../public/EleventhDoctor.png'
-import NehaDhupiaPhoto from '../../public/NehaDhupia.jpeg'
 import TenthDoctorPhoto from '../../public/TenthDoctor.jpeg'
 import TwentyOnePhoto from '../../public/TenPlusEleven.jpg'
 
@@ -22,7 +21,7 @@ class RandomGenerator extends Component {
         2: 'Kitne aadmi the ?',
         3: 'Number of times Sheldon knocks',
         4: 'May the Fourth be with you',
-        5: <img src={NehaDhupiaPhoto} alt="High Five" height="140px"/>,
+        5: 'The magical prime',
         6: 'No of infinity stones',
         7: 'Bond. James Bond.',
         8: 'Ball pool',
@@ -112,7 +111,10 @@ class RandomGenerator extends Component {
 
     rand = () => {
         // console.log('rand')
-        return Math.floor(Math.random() * 100) % 90 + 1;
+        let x = Math.floor(Math.random() * 100) % 90 + 1;
+        if (x < 10)
+            x = '0' + x
+        return x
     }
 
     shuffle = () => {
@@ -150,7 +152,7 @@ class RandomGenerator extends Component {
                         <h2>Generate</h2>
                     </button>
                     <div className="generatorValue">
-                        <h1 className="display-4">{this.state.val}</h1>
+                        <h1 className="display-3">{this.state.val}</h1>
                     </div>
 
                     <div className="alert-secondary" id="dialogueBox">
