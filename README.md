@@ -1,3 +1,10 @@
+## Tambola Number Generator
+This project allows the user to play the popular board game Tambola (Indian Bingo). It uses an unbiased random number generator. Built with ReactJS. This project can be viewed [here](https://tarunluthra123.github.io/Tambola-React/). <br>
+<br>
+Built on a Ubuntu 18.04(Linux Machine) using Jetbrains Webstorm.<br>
+Made by Tarun Luthra (Github : [tarunluthra123](https://github.com/tarunluthra123))
+
+## React JS Documentation
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
