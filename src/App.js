@@ -6,6 +6,23 @@ import RandomGenerator from "./components/RandomGenerator";
 import LastNumber from "./components/LastNumber";
 import Options from "./components/Options";
 import {Button, Modal} from "react-bootstrap";
+import {bounceInLeft, fadeInUp, headShake} from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
+
+const styles = {
+    bounce: {
+        animation: 'x 2s',
+        animationName: Radium.keyframes(bounceInLeft, 'bounce')
+    },
+    fadeInUp: {
+        animation: '2s',
+        animationName: Radium.keyframes(fadeInUp, 'fadeInUp')
+    },
+    headShake: {
+        animation: '1.5s',
+        animationName: Radium.keyframes(headShake, 'headShake')
+    },
+}
 
 class App extends Component {
     constructor(props) {
@@ -81,18 +98,28 @@ class App extends Component {
                 <NavBar/>
                 <div className="row">
                     <div className="col">
-                        <Board className="m-8 p-8" sequence={this.state.sequence}/>
+                        <StyleRoot>
+                            <div style={styles.bounce}>
+                                <Board className="m-8 p-8" sequence={this.state.sequence}/>
+                            </div>
+                        </StyleRoot>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-3 m-4">
-                        <LastNumber value={this.state.lastNumber}/>
+
+                            <LastNumber value={this.state.lastNumber}/>
+
                     </div>
                     <div className="col m-4">
-                        <Options sequence={this.state.sequence}/>
+                        <StyleRoot style={styles.headShake}>
+                            <Options sequence={this.state.sequence}/>
+                        </StyleRoot>
                     </div>
                     <div className="col-4 m-4">
-                        <RandomGenerator nextRandomInteger={this.generateNumber}/>
+                        <StyleRoot style={styles.fadeInUp}>
+                            <RandomGenerator nextRandomInteger={this.generateNumber}/>
+                        </StyleRoot>
                     </div>
                 </div>
             </div>
