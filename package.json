@@ -10,7 +10,7 @@
     "react-animations": "^1.0.0",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
-    "react-scripts": "0.9.5",
+    "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
